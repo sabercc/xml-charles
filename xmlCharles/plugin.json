@@ -1,0 +1,31 @@
+{
+  "pluginName": "xmlcharles",
+  "description": "xmlcharles",
+  "version": "0.0.1",
+  "author": "zy",
+  "main": "vue/index.html",
+  "development": {
+    "main": "http://localhost:4444/index.html"
+  },
+  "update": false,
+  "preload": "preload.js",
+  "logo": "logo.png",
+  "features": [
+    {
+      "code": "xmlcharles",
+      "explain": "charles的xml文件转化为whistle用的代理格式",
+      "cmds": [
+        "xml",
+        "whistle",
+        {
+          "type": "files",
+          "label": "上传xml文件",
+          "fileType": "file",
+          "match": "/.*(xml)$/i",
+          "minLength": 1,
+          "maxLength": 1
+        }
+      ]
+    }
+  ]
+}
