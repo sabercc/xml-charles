@@ -157,7 +157,7 @@ export default {
     },
     parseXmlJson2Text (json) {
       const result = json.map.mappings.mapMapping.map(({ sourceLocation, destLocation }) => {
-        return `${sourceLocation.host} ${destLocation.host}`
+        return `${sourceLocation.host + (sourceLocation.path ?? '')} ${destLocation.host + (destLocation.path ?? '')}`
       }).join('\n')
       return result
     },
